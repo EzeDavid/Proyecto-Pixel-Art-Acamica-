@@ -79,7 +79,7 @@ colorPersonalizado.addEventListener('change',
         indicador.style.backgroundColor = colorActual;
   });
 
-    //eventos del mousse
+    //eventos del mousse con jquery
 
   artGrilla.addEventListener('mousedown', pintar);
   artGrilla.addEventListener('mousemove', pintarMoviendo);

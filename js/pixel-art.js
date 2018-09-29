@@ -101,6 +101,18 @@ function pintarMoviendo(e){
   };
 };
 
+// Delete
+
+$('#borrar').click(function(){
+  $("#grilla-pixeles div").animate({"background-color": "#ffff"}, 1100);
+ });
+
+ // guardar
+
+$('#guardar').click(function(){
+  guardarPixelArt();
+});
+
   window.onload = function(){
     paletaOfColors();
     grillaDePixeles();

@@ -74,32 +74,29 @@ artGrilla.addEventListener('click',
 colorPersonalizado.addEventListener('change',
   function() {
     // Se guarda el color de la rueda en colorActual
-
          colorActual = colorPersonalizado.value;
-         indicador.style.backgroundColor = colorActual;
-
     // Completar para que cambie el indicador-de-color al colorActual
+        indicador.style.backgroundColor = colorActual;
   });
 
- /* paletaDeColores.addEventListener('mousedown'
-(function(e){
-  e.target.style.color = indicador;
-})
-)
+    //eventos del mousse
 
-paletaDeColores.addEventListener('mouseup',
-(function mouseUp(e){
-  e.target.style.color = indicador;
-})
-);
+  artGrilla.addEventListener('mousedown', pintar);
+  artGrilla.addEventListener('mousemove', pintarMoviendo);
 
-paletaDeColores.addEventListener('mouseover',
-(function mouseOver(e){
-  e.target.style.color = indicador;
-})
-)*/
+ let presionado = false;
+  $(document).mousedown(function() {
+    presionado = true;
+  }).mouseup(function() {
+    presionado = false;
+  });
 
-  window.onload = function(){
-    paletaOfColors();
-    grillaDePixeles();
+function pintar(e){
+  e.target.style.backgroundColor = $("#indicador-de-color").css("background-color");
+};
+
+function pintarMoviendo(e){
+  if(presionado){
+    pintar(e);
   };
+};

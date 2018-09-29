@@ -113,6 +113,23 @@ $('#guardar').click(function(){
   guardarPixelArt();
 });
 
+// personajes
+
+$('#batman').click(function(){
+  cargarSuperheroe(batman);
+});
+$('#wonder').click(function(){
+  cargarSuperheroe(wonder);
+});
+
+$('#flash').click(function(){
+  cargarSuperheroe(flash);
+});
+
+$('#invisible').click(function(){
+  cargarSuperheroe(invisible);
+});
+
   window.onload = function(){
     paletaOfColors();
     grillaDePixeles();

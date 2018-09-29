@@ -1,5 +1,5 @@
 
-var nombreDeColores = ['White', 'LightYellow',
+let nombreDeColores = ['White', 'LightYellow',
   'LemonChiffon', 'LightGoldenrodYellow', 'PapayaWhip', 'Moccasin', 'PeachPuff', 'PaleGoldenrod', 'Bisque', 'NavajoWhite', 'Wheat', 'BurlyWood', 'Tan',
   'Khaki', 'Yellow', 'Gold', 'Orange', 'DarkOrange', 'OrangeRed', 'Tomato', 'Coral', 'DarkSalmon', 'LightSalmon', 'LightCoral', 'Salmon', 'PaleVioletRed',
   'Pink', 'LightPink', 'HotPink', 'DeepPink', 'MediumVioletRed', 'Crimson', 'Red', 'FireBrick', 'DarkRed', 'Maroon',
@@ -32,16 +32,15 @@ let paletaDeColores = document.getElementById('paleta');
 let artGrilla = document.getElementById('grilla-pixeles');
 let indicador = document.getElementById('indicador-de-color');
 
-
 // Paleta de colores //
 
 function paletaOfColors(){
   for (let i = 0; i < nombreDeColores.length; i++) {
-     let paletaDeColores = document.createElement('div');
-         paletaDeColores.style.background = nombreDeColores[i];
-         paletaDeColores.className = 'color-paleta';
-         paletaDeColores.setAttribute('id', nombreDeColores[i]);
-         paleta.appendChild(paletaDeColores);
+        let paletaDeColores = document.createElement('div');
+            paletaDeColores.style.background = nombreDeColores[i];
+            paletaDeColores.className = 'color-paleta';
+            paletaDeColores.setAttribute('id', nombreDeColores[i]);
+            paleta.appendChild(paletaDeColores);
   };
 };
 
@@ -57,17 +56,15 @@ function grillaDePixeles(){
 
 // seleccionar color de paleta //
 
-
-
 paletaDeColores.addEventListener('click',
-(function(e) {
-  indicador.style.backgroundColor = e.target.style.backgroundColor;
+  (function(e) {
+    indicador.style.backgroundColor = e.target.style.backgroundColor;
 })
 )
 
 artGrilla.addEventListener('click',
-(function(e) {
-  e.target.style.backgroundColor = indicador.style.backgroundColor;
+  (function(e) {
+    e.target.style.backgroundColor = indicador.style.backgroundColor;
 })
 )
 
@@ -97,14 +94,14 @@ function pintar(e){
 
 function pintarMoviendo(e){
   if(presionado){
-    pintar(e);
+      pintar(e);
   };
 };
 
 // Delete
 
 $('#borrar').click(function(){
-  $("#grilla-pixeles div").animate({"background-color": "#ffff"}, 1100);
+  $("#grilla-pixeles div").animate({"background-color": "#ffff"}, 1400);
  });
 
  // guardar
@@ -118,6 +115,7 @@ $('#guardar').click(function(){
 $('#batman').click(function(){
   cargarSuperheroe(batman);
 });
+
 $('#wonder').click(function(){
   cargarSuperheroe(wonder);
 });

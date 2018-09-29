@@ -100,3 +100,8 @@ function pintarMoviendo(e){
     pintar(e);
   };
 };
+
+  window.onload = function(){
+    paletaOfColors();
+    grillaDePixeles();
+  };
